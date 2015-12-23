@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export DEVICE=neo5
+export VENDOR=oppo
+
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
@@ -156,7 +159,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter bacon,\$(TARGET_DEVICE)),)
+ifneq (\$(filter neo5,\$(TARGET_DEVICE)),)
 
 ifeq (\$(QCPATH),)
 
